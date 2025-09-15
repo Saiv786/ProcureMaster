@@ -4,6 +4,9 @@ from database import init_database
 from auth import authenticate_user, get_user_role, logout_user
 from pages import dashboard, projects, work_orders, cutting_lists, balance_orders, production_log, daily_targets, dispatch, audit_trail, users
 
+# Clear default Streamlit sidebar navigation
+st.query_params.clear()
+
 # Page configuration
 st.set_page_config(
     page_title="Project & Procurement Management System",

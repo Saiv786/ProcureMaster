@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 import streamlit as st
 
 # Database configuration
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://user:password@localhost/ppms")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:postgres@localhost/ppms")
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
@@ -187,7 +187,7 @@ def init_database():
             # Create default admin user if not exists
             conn.execute(text("""
                 INSERT INTO users (username, password_hash, role)
-                SELECT 'admin', 'admin123', 'Admin'
+                SELECT 'admin', '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9', 'Admin'
                 WHERE NOT EXISTS (SELECT 1 FROM users WHERE username = 'admin')
             """))
             
