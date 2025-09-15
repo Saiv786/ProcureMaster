@@ -1,0 +1,149 @@
+🎯 Objective
+
+Build a web-based Project & Procurement Management System to replace manual Excel workflows.
+The system should allow your father to:
+
+Manage multiple projects
+
+Track procurement, cutting, dispatch, and production
+
+Maintain historical records (no overwriting data like Excel — every change is tracked with dates)
+
+Assign responsibilities via workflows
+
+Generate dashboards and filtered reports
+
+📊 Modules & Features
+1. Project Management
+
+Create & manage multiple projects (e.g., HIBA Tower, etc.).
+
+Add project details: client, location, start date, deadlines, etc.
+
+Assign Points of Contact (POCs) for specific areas (procurement, dispatch, cutting, etc.).
+
+Ability to archive completed projects.
+
+2. Work Orders (WO)
+
+Create work orders linked to projects.
+
+Each WO contains:
+
+WO number, date, project, floor, description.
+
+Type (Cutting/Production/Procurement).
+
+Assigned responsible person (from POCs).
+
+Ability to update status (Pending → In Progress → Completed → Dispatched).
+
+Historical tracking of changes (audit trail).
+
+3. Cutting List Management (from Cutting List sheet)
+
+Store order-wise cutting lists with fields like:
+
+Order number, date, floor, description, dimensions (W, H, QTY, color).
+
+Upload design/specification files if needed.
+
+Mark items as cut / pending / re-cut.
+
+Maintain logs of past cutting lists.
+
+4. Balance Orders (from Balance Order sheet)
+
+Track remaining items per project.
+
+Fields:
+
+Date, WO number, project, floor.
+
+Priority level, specs, required qty, fulfilled qty, total.
+
+Automatic update when items move from Balance → Production → Dispatch.
+
+Filter by project, priority, or due date.
+
+5. Production Log (from Production Log sheet)
+
+Digital logbook for daily production activities:
+
+WO, project, operator, date, machine used, produced quantity.
+
+Dashboard view: production by day / week / month.
+
+Option to compare planned vs actual output.
+
+6. Daily Production Targets (from Daily Production Targets sheet)
+
+Define daily targets for:
+
+Order, project, description, quantity, target date.
+
+Track progress:
+
+Assigned to specific team member (R.P / Nazar / Farhad, etc.).
+
+Status updates (Not Started / In Progress / Completed).
+
+Alerts for delayed targets.
+
+Dashboard for target vs achievement.
+
+7. Dispatch & Delivery Tracking
+
+Record dispatch details:
+
+Date, project, order, vehicle, responsible person.
+
+Generate delivery challans / slips.
+
+Mark status as delivered / pending.
+
+8. Workflow & Assignment
+
+Assign tasks to POCs (procurement, production, dispatch).
+
+Task notifications & reminders.
+
+Ability to reassign tasks if needed.
+
+9. History & Audit Trail
+
+Every change (update, deletion, completion) is logged with:
+
+User, timestamp, old value → new value.
+
+Ability to view project status on any past date (instead of overwriting Excel).
+
+10. Dashboards & Reports
+
+Overview dashboard: total projects, pending work orders, today’s targets, balance orders.
+
+Filters by project, POC, work order status, priority.
+
+Downloadable reports (Excel/PDF).
+
+11. User Management
+
+Different roles:
+
+Admin (full control)
+
+Project Manager (create/manage projects, approve orders)
+
+Operator/Worker (view assigned tasks, update progress)
+
+Role-based permissions.
+
+12. Tech Features
+
+Web app with responsive UI (desktop & mobile).
+
+Database-backed system for structured history.
+
+Authentication & secure access.
+
+Option to import old Excel data to seed the system.
