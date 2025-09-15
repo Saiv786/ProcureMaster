@@ -15,6 +15,11 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Health check endpoint
+if st.experimental_get_query_params().get("healthz") is not None:
+    st.write("ok")
+    st.stop()
+
 # Initialize database
 init_database()
 
