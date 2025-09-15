@@ -16,7 +16,7 @@ st.set_page_config(
 )
 
 # Health check endpoint
-if st.experimental_get_query_params().get("healthz") is not None:
+if st.query_params.get("healthz") is not None:
     st.write("ok")
     st.stop()
 
